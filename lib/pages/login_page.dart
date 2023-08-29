@@ -19,15 +19,30 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 100,
+                height: 70,
               ),
-              Container(
-                width: 150,
-                height: 150,
-                color: Colors.amber,
+              Row(
+                children: [
+                  Expanded(child: Container()),
+                  Expanded(
+                    flex: 5,
+                    child: Image.network(
+                      "https://hermes.digitalinnovation.one/assets/diome/logo.png",
+                    ),
+                  ),
+                  Expanded(child: Container()),
+                ],
               ),
               const SizedBox(
+                height: 20,
+              ),
+              const Text("Ja tem cadastro?"),
+              const SizedBox(
                 height: 10,
+              ),
+              const Text("Faça seu login e make the change_"),
+              const SizedBox(
+                height: 40,
               ),
               Container(
                 width: double.infinity,
@@ -49,9 +64,8 @@ class _LoginPageState extends State<LoginPage> {
                 child: const Text("Informe sua senha"),
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
-              Expanded(child: Container()),
               Container(
                 width: double.infinity,
                 alignment: Alignment.center,
