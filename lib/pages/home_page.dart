@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var numberGenerate = 0;
-
+  var qtdClicks = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,15 +23,25 @@ class _HomePageState extends State<HomePage> {
           // style: GoogleFonts.pacifico(),
         ),
       ),
-      body: Center(
-          child: Text(
-        numberGenerate.toString(),
-        //style: GoogleFonts.acme(fontSize: 20),
-      )),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text("foi clicado $qtdClicks"),
+          ),
+          Center(
+            child: Text(
+              numberGenerate.toString(),
+              //style: GoogleFonts.acme(fontSize: 20),
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_box),
         onPressed: () {
           setState(() {
+            qtdClicks++;
             numberGenerate =
                 GenerateNumberRandomService.generateRandomNumber(1000);
           });
