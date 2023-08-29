@@ -23,19 +23,19 @@ class _HomePageState extends State<HomePage> {
           // style: GoogleFonts.pacifico(),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text("foi clicado $qtdClicks"),
-          ),
-          Center(
-            child: Text(
+      body: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("foi clicado $qtdClicks"),
+            Text(
               numberGenerate.toString(),
               //style: GoogleFonts.acme(fontSize: 20),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_box),
